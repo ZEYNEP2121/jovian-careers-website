@@ -1,50 +1,34 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+   
     <title>zeyno</title>
     <style>
-      h1{
-        font-size: 40px;
-        font-family: fantasy;
-        font-style: papyrus;
-        font-weight: bold;
-        color: #A56903;
-        text-align:center;
-      }
       #banner{
-        width:100%;
-        height:360px;
+        height: 360px;
+        width: 100%;
         object-fit:cover;
-      }
-      h2{
-        font-size: 32px;
-        font-family: fantasy;
-        font-style: papyrus;
-        font-weight: normal;
-        color: #A56903;
-        text-align:center;
-      }
-      #container{
-        max-width: 720px;
-        margin:0 auto 0 auto ;
-      }
-      .body-text{
-        font-family: fantasy;
-        font-style: papyrus;
       }
     </style>
   </head>
   <body>
-    <div id="container"">
-     <h1>Jovian Careers</h1>
-    <img id="banner" src="https://ccdbe932-70ba-43de-8146-35757cda1dae-00-ns7llwaidh8h.picard.replit.dev/static/banner.jpg" height="320">
-    <h2>About Jovian</h2>
-    <p class="body-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec in lacus aliquam, lobortis sem eu, consequat lectus. Suspendisse varius eros ac sapien viverra convallis. Proin lobortis, urna faucibus sollicitudin lobortis, nulla orci convallis diam, quis eleifend felis est et velit. Nullam vel tristique tellus, id consectetur sapien.</p>
-    <h2>Open Positions</h2>
-    <p class="body-text">To-Do</p>
-      <div style="text-align:center";>
-    <button>Contact Us</button>
-    <p>Copyright 2024, Jovian</p>
+    <div class="container">
+     <h1 class="text-center mt-4 mb-4">Jovian Careers</h1>
+    <img class="img-fluid" id="banner" src="https://ccdbe932-70ba-43de-8146-35757cda1dae-00-ns7llwaidh8h.picard.replit.dev/static/banner.jpg">
+    <h2 class="text-center mt-2 mb-4">About Jovian</h2>
+    <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec in lacus aliquam, lobortis sem eu, consequat lectus. Suspendisse varius eros ac sapien viverra convallis. Proin lobortis, urna faucibus sollicitudin lobortis, nulla orci convallis diam, quis eleifend felis est et velit. Nullam vel tristique tellus, id consectetur sapien.</p>
+    <h2 class="text-center mt-2 mb-4">Open Positions</h2>
+    <div>
+      {% for job in jobs %}
+        {% include 'jobItem.html' %}
+      {% endfor %}
+    </div>
+      <div class="text-center">
+    <button type="button" class="btn btn-primary btn-lg">Contact Us</button>
+    <p class="mt-2">Copyright 2024, Jovian</p>
     </div>
     
   </body>

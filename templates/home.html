@@ -11,15 +11,20 @@
         height: 360px;
         width: 100%;
         object-fit:cover;
+        margin-bottom:16px;
       }
     </style>
   </head>
   <body>
+    {% include 'nav.html' %}
+    <img class="img-fluid" id="banner" src="https://ccdbe932-70ba-43de-8146-35757cda1dae-00-ns7llwaidh8h.picard.replit.dev/static/banner.jpg">
     <div class="container">
      <h1 class="text-center mt-4 mb-4">Jovian Careers</h1>
-    <img class="img-fluid" id="banner" src="https://ccdbe932-70ba-43de-8146-35757cda1dae-00-ns7llwaidh8h.picard.replit.dev/static/banner.jpg">
-    <h2 class="text-center mt-2 mb-4">About Jovian</h2>
-    <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec in lacus aliquam, lobortis sem eu, consequat lectus. Suspendisse varius eros ac sapien viverra convallis. Proin lobortis, urna faucibus sollicitudin lobortis, nulla orci convallis diam, quis eleifend felis est et velit. Nullam vel tristique tellus, id consectetur sapien.</p>
+    <div class="row">
+    <p class="lead col-7">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec in lacus aliquam, lobortis sem eu, consequat lectus. Suspendisse varius eros ac sapien viverra convallis. Proin lobortis, urna faucibus sollicitudin lobortis, nulla orci convallis diam, quis eleifend felis est et velit. Nullam vel tristique tellus, id consectetur sapien.</p>
+      <img src="">
+    </div>
+      
     <h2 class="text-center mt-2 mb-4">Open Positions</h2>
     <div>
       {% for job in jobs %}
@@ -27,9 +32,9 @@
       {% endfor %}
     </div>
       <div class="text-center">
-    <button type="button" class="btn btn-primary btn-lg">Contact Us</button>
+    <a href="mailto:hello@jovian.ai?subject=Question%20about%20Job%20Openings&body=My%20Name%3A%20%3Cyour%20name%20here%3E%0D%0A%0D%0AMy%20questions%3A%20%3Center%20your%20questions%20here%3E" class="btn btn-primary btn-lg">Contact Us</a>
     <p class="mt-2">Copyright 2024, Jovian</p>
     </div>
-    
+      {% include 'footer.html' %}
   </body>
 </html>
